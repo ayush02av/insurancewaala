@@ -2,15 +2,17 @@ body {
     margin: 0;
     padding: 0;
 
+    background-color: rgba(7, 219, 128, 0.834);
+    color: rgb(50, 40, 50);
+
     font-family: 'Roboto';
+    font-weight: 400;
 }
 
 #root {
     display: grid;
     place-items: center;
 
-    background-color: rgba(7, 219, 128, 0.834);
-    color: rgb(50, 40, 50);
     width: 100%;
     height: 100vh;
 }
@@ -48,6 +50,10 @@ body {
     text-align: left;
 }
 
+#root .info {
+    text-align: justify;
+}
+
 .back-icon {
     --size: 30px;
     display: block;
@@ -55,6 +61,22 @@ body {
     background-size: 100%;
     width: var(--size);
     height: var(--size);
+}
+
+p::first-letter {
+    font-size: 200%;
+    color: black;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: number;
+}
+
+li {
+    margin: 0;
+    padding: 0;
 }
 
 @media only screen and (max-width: 600px) {
