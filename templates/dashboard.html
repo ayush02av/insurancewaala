@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Insurance Waala</title>
+    <link rel="icon" type="image/x-icon" href="/static/images/icon.png">
     <link rel="stylesheet" href="/static/css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,15 +20,57 @@
         <div class="content">
             <a href="/" class="back-icon"></a>
             <h1 class="heading">Fill details for estimate</h1>
-            <h3 class="heading">My very awesome statistical data shows that you need an insurance RIGHT NOW!
+            <h3 class="heading">
+                Predict insurance charges using a simple ML model!
+                <br>
+                <small><a href="/about">More about our model...</a></small>
             </h3>
-            <a class="cta" href="/dashboard">Submit My Information</a>
-            <br />
-            <a class="cta" href="/about">More about our model...</a>
+            <br>
+            <div>
+                <div>
+                    <b>Age:</b>
+                    <span id="age-display">30</span>
+                    <input type="range" min="20" max="60" step="1" value="30" name="age" id="age">
+                </div>
+                <br />
+                <div>
+                    <b>Sex:</b>
+                    <input type="radio" id="female" name="female" value="1">
+                    <label for="female">Female</label>
+                    <input type="radio" id="male" name="female" value="0">
+                    <label for="male">Male</label>
+                </div>
+                <br />
+                <div>
+                    <b>Body Mass Index:</b>
+                    <br />
+                    Height(cm): <input type="number" id="height" name="height">
+                    <br />
+                    Weight(kg): <input type="number" id="weight" name="height">
+                </div>
+                <br />
+                <div>
+                    <b>Children Count:</b>
+                    <span id="noc-display">0</span>
+                    <input type="range" min="0" max="9" step="1" value="0" name="noc" id="noc">
+                </div>
+                <br />
+                <div>
+                    <b>Do You Smoke?</b>
+                    <input type="radio" id="yes" name="smoker" value="1">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="smoker" value="0">
+                    <label for="no">No</label>
+                </div>
+                <br />
+            </div>
+            <br>
+            <span class="cta" id="submit">Submit</span>
+            <br /><br />
         </div>
     </div>
 
-    <script src="/static/js/index.js"></script>
+    <script src="/static/js/dashboard.js"></script>
 </body>
 
 </html>

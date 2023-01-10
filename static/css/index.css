@@ -46,10 +46,6 @@ body {
     transition: 0.5s;
 }
 
-#root .form {
-    text-align: left;
-}
-
 #root .info {
     text-align: justify;
 }
