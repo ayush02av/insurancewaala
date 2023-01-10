@@ -32,7 +32,7 @@ def predict():
         'smoker'
     ]
     for validator in validators:
-        if validator not in data_keys:
+        if validator not in data_keys or data[validator] == None:
             errors.append(f"{validator} is required")
     
     if len(errors) > 0:
@@ -66,7 +66,10 @@ def predict():
     if prediction < 100:
         return jsonify({
             'success': 0,
-            'errors': ['Our Model does not serve to your request']
+            'errors': [
+                'Our Model does not serve to your request',
+                'Try increasing your age or bmi'
+            ]
         })
     
     return jsonify({

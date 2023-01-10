@@ -35,10 +35,8 @@
                 <br />
                 <div>
                     <b>Sex:</b>
-                    <input type="radio" id="female" name="female" value="1">
-                    <label for="female">Female</label>
-                    <input type="radio" id="male" name="female" value="0">
-                    <label for="male">Male</label>
+                    <input type="radio" id="sex-female" name="sex" value="1">Female
+                    <input type="radio" id="sex-male" name="sex" value="0">Male
                 </div>
                 <br />
                 <div>
@@ -57,12 +55,22 @@
                 <br />
                 <div>
                     <b>Do You Smoke?</b>
-                    <input type="radio" id="yes" name="smoker" value="1">
-                    <label for="yes">Yes</label>
-                    <input type="radio" id="no" name="smoker" value="0">
-                    <label for="no">No</label>
+                    <input type="radio" id="smoker-yes" name="smoker" value="1">
+                    Yes
+                    <input type="radio" id="smoker-no" name="smoker" value="0">
+                    No
                 </div>
                 <br />
+                <div>
+                    <b>Region:</b>
+                    <select id="region" name="region">
+                        <option value=null>Select Region</option>
+                        <option value=0>South-West</option>
+                        <option value=1>South-East</option>
+                        <option value=2>North-West</option>
+                        <option value=3>North-East</option>
+                    </select>
+                </div>
             </div>
             <br>
             <span class="cta" id="submit">Submit</span>
@@ -71,6 +79,8 @@
     </div>
 
     <script src="/static/js/dashboard.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>
